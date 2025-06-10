@@ -1,8 +1,8 @@
 "use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Brain, Code, Database, TrendingUp, Users, Award, Calendar, MapPin } from "lucide-react";
+import { Brain, Code, TrendingUp, Users, Award, Calendar, MapPin } from "lucide-react";
 
 export const About = () => {
   const stats = [
@@ -113,7 +113,7 @@ export const About = () => {
                 <CardContent>
                   <div className="flex flex-wrap gap-3">
                     {skills.map((skill, index) => (
-                      <Badge 
+                      <Badge
                         key={skill}
                         variant="secondary" 
                         className="bg-slate-700 text-slate-200 hover:bg-slate-600 transition-all duration-300 hover:scale-105 cursor-default"
@@ -207,7 +207,7 @@ export const About = () => {
                 Let's Build Something Amazing Together
               </h3>
               <p className="text-slate-300 max-w-2xl mx-auto">
-                I'm always excited to collaborate on challenging ML projects and explore 
+                I&apos;m always excited to collaborate on challenging ML projects and explore 
                 innovative solutions. Feel free to reach out to discuss opportunities.
               </p>
             </CardContent>
