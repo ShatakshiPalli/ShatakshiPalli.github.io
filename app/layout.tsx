@@ -1,36 +1,21 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import "@/styles/globals.css"
+import { Inter } from "next/font/google"
+import type React from "react" // Import React
 
-export const metadata: Metadata = {
-  title: "Shatakshi - ML Engineer & AI Specialist",
-  description: "Machine Learning Engineer specializing in AI solutions, data science, and scalable ML systems. Passionate about building innovative technology solutions.",
-  keywords: ["Machine Learning", "AI Engineer", "Data Science", "Python", "TensorFlow", "PyTorch", "MLOps"],
-  authors: [{ name: "Shatakshi" }],
-  creator: "Shatakshi",
-  openGraph: {
-    title: "Shatakshi - ML Engineer & AI Specialist",
-    description: "Machine Learning Engineer specializing in AI solutions, data science, and scalable ML systems.",
-    type: "website",
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    creator: "@shatakshi",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+const inter = Inter({ subsets: ["latin"] })
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
-  );
+  )
 }
+
+export const metadata = {
+      generator: 'v0.dev'
+    };
